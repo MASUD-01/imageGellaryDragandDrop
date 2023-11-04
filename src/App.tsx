@@ -88,11 +88,14 @@ function App() {
                       } `}
                     >
                       <p className="text-center"> add image</p>
-                     
                     </div>
                   ) : (
                     <div className="relative group flex justify-center ">
-                      <img src={item.image} alt={`image/${item.id}`} />
+                      <img
+                        src={item.image}
+                        alt={`image/${item.id}`}
+                        style={{ height: "200px", width: "200px" }}
+                      />
                       <div
                         className={`absolute top-0 hover:cursor-grab opacity-[.2] w-full h-full ${
                           selectItem.includes(item.id)
@@ -102,7 +105,6 @@ function App() {
                       ></div>
                       <input
                         type="checkbox"
-                        // className="w-5 h-5  absolute top-0 hidden group-hover:block z-20"
                         className={`w-5 h-5 absolute top-0 group-hover:block ${
                           !selectItem.includes(item.id) && "hidden"
                         }`}
