@@ -88,6 +88,7 @@ function App() {
                       } `}
                     >
                       <p className="text-center"> add image</p>
+                     
                     </div>
                   ) : (
                     <div className="relative group flex justify-center ">
