@@ -17,13 +17,12 @@ export const Photo = forwardRef(
     const inlineStyles: React.CSSProperties = {
       opacity: faded ? "0.2" : "1",
       transformOrigin: "0 0",
-      border: currentItemUrl?.includes(String(url)) ? "2px solid red" : "none",
+      border: currentItemUrl?.includes(String(url)) ? "2px solid gray" : "none",
       gridRowStart: index === 0 ? "span 2" : "auto",
       gridColumnStart: index === 0 ? "span 2" : "auto",
 
       ...style,
     };
-
     return (
       <div className="relative" ref={ref} style={inlineStyles} {...props}>
         <img

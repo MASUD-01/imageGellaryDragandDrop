@@ -18,12 +18,6 @@ export const SortableItem: React.FC<SortablePhotoProps> = (props) => {
     transform: CSS.Transform.toString(transform),
     transition,
   };
-
-  // const handleDeleteClick = () => {
-  //   setItems((prevItems) => prevItems.filter((url) => !selected.includes(url)));
-  //   setSelected([]); // Clear the selected array after deletion
-  // };
-
   return (
     <Photo
       ref={setNodeRef}

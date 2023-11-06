@@ -12,7 +12,9 @@ const Header = ({ total, handleDeleteClick, clearSelect }: Props) => {
           {total === 0 && <div className="font-bold">Gallery</div>}
           {total > 0 && (
             <div className="flex gap-4">
-              <div className="font-semibold">{total} Files Selected</div>
+              <div className="font-semibold">
+                {total} File{total > 1 ? "s" : ""} Selected
+              </div>
               <button
                 className="border border-green-500 text-xs px-1 rounded hover:bg-green-600 hover:text-white transition-all duration-150"
                 onClick={clearSelect}
@@ -28,7 +30,7 @@ const Header = ({ total, handleDeleteClick, clearSelect }: Props) => {
               onClick={handleDeleteClick}
               className="text-red-500 font-semibold"
             >
-              Delete Files
+              Delete File{total > 1 ? "s" : ""}
             </button>
           )}
         </div>
